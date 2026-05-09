@@ -9,8 +9,8 @@ COPY package.json pnpm-lock.yaml ./
 # Install pnpm using corepack (comes with Node.js)
 RUN corepack enable && corepack prepare pnpm@latest --activate
 
-# Install dependencies
-RUN pnpm install --frozen-lockfile
+# Install dependencies (without frozen-lockfile to allow flexibility)
+RUN pnpm install
 
 # Copy frontend source code
 COPY client ./client

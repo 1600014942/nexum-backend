@@ -1,13 +1,16 @@
 # Stage 1: Build frontend
-FROM node:22-alpine AS frontend-builder
+FROM node:22 AS frontend-builder
 
 WORKDIR /app
 
 # Copy frontend dependencies
 COPY package.json pnpm-lock.yaml ./
 
-# Install pnpm and dependencies
-RUN npm install -g pnpm && pnpm install --frozen-lockfile
+# Install pnpm using corepack (comes with Node.js)
+RUN corepack enable && corepack prepare pnpm@latest --activate
+
+# Install dependencies
+RUN pnpm install --frozen-lockfile
 
 # Copy frontend source code
 COPY client ./client

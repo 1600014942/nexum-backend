@@ -229,7 +229,7 @@ export default function Home() {
 
           <div className="flex items-center gap-4">
             <LanguageSwitcher />
-            <button onClick={() => handleExternalLink('https://nexumtrade-77xjmcdm.manus.space')} className="border-2 border-[#D4AF37] bg-transparent px-5 py-2 text-sm font-bold text-[#D4AF37] transition hover:bg-[#D4AF37] hover:text-black hover:shadow-[0_0_20px_rgba(212, 175, 55,0.3)]">
+            <button onClick={() => handleExternalLink('https://nexumtrd-3ph6iftp.manus.space/')} className="border-2 border-[#D4AF37] bg-transparent px-5 py-2 text-sm font-bold text-[#D4AF37] transition hover:bg-[#D4AF37] hover:text-black hover:shadow-[0_0_20px_rgba(212, 175, 55,0.3)]">
               {language === 'en' ? 'Launch APP' : language === 'zh' ? '启动应用' : '앱 실행'}
             </button>
             <button onClick={() => handleNavigation('/quote')} className="border-2 border-[#F3BA2F] bg-[#F3BA2F] px-5 py-2 text-sm font-bold text-black transition hover:bg-[#F3BA2F] hover:border-[#F3BA2F] hover:shadow-[0_0_20px_rgba(243, 186, 47,0.3)]">

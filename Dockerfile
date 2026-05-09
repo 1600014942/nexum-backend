@@ -7,7 +7,7 @@ WORKDIR /app
 COPY package.json pnpm-lock.yaml ./
 
 # Install pnpm using corepack (comes with Node.js)
-RUN corepack enable && corepack prepare pnpm@latest --activate
+RUN corepack enable && corepack prepare pnpm@10.4.1 --activate
 
 # Install dependencies (without frozen-lockfile to allow flexibility)
 RUN pnpm install

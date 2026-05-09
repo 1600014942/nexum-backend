@@ -1,4 +1,4 @@
-# Nexum Backend v0.3
+# Nexum Backend v0.3 [This is the newest version]
 
 A complete FastAPI backend for the Nexum public site and early commercial workflow.
 
